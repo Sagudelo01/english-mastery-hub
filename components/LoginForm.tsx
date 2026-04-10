@@ -1,10 +1,13 @@
+"use client";
 import Image from "next/image";
-
+import AnimatedTitle from "@/components/animatedTitle";
 export default function LoginForm() {
+
   return (
     <div className="flex shadow-2xl">
       <div className="flex flex-col items-center justify-center text-center p-20 gap-8 bg-[#f5f5f5ab] rounded-2xl xl:rounded-tr-none xl:rounded-br-none">
-        <h1 className="text-5xl font-bold text-black">Welcome</h1>
+        
+        <AnimatedTitle />
 
         <div className="flex flex-col text-2xl text-left gap-1 text-black">
           <span>Usuario</span>
