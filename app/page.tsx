@@ -3,6 +3,7 @@ import LoginForm from "@/components/LoginForm";
 import Loader from "@/components/loader";
 // FIN IMPORTANCIONES
 
+
 export default function Home() {
   return (
     <>
