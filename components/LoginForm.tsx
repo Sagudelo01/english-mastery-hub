@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import AnimatedTitle from "@/components/animatedTitle";
+import { signIn } from "next-auth/react";
 export default function LoginForm() {
   return (
     <div className="flex shadow-2xl">
@@ -11,7 +12,10 @@ export default function LoginForm() {
           Simplifica tu inicio de sesión. Una sola cuenta, acceso total.
         </p>
 
-        <button className="flex items-center justify-center gap-3 px-8 py-3 text-lg font-medium bg-white text-black rounded-full hover:scale-105 transition-all shadow-md">
+        <button
+          onClick={() => signIn("google")}
+          className="flex items-center justify-center gap-3 px-8 py-3 text-lg font-medium bg-white text-black rounded-full hover:scale-105 transition-all shadow-md"
+        >
           <svg
             width="24"
             height="24"
@@ -38,8 +42,6 @@ export default function LoginForm() {
           </svg>
           Inicia con Google
         </button>
-
-  
       </div>
 
       <Image

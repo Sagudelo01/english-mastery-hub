@@ -1,10 +1,15 @@
-// INCIO IMPORTANCIONES
+// INCIO IMPORTACIONES
+import { auth } from "@/auth";
 import LoginForm from "@/components/LoginForm";
 import Loader from "@/components/loader";
-// FIN IMPORTANCIONES
+import { redirect } from "next/navigation";
+// FIN IMPORTACIONES
 
+export default async function Home() {
+  const session = await auth();
 
-export default function Home() {
+  if (session) redirect("/dashboard");
+
   return (
     <>
       <Loader />
